@@ -1,0 +1,148 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = Single
+  Caption = 'IChecksum'
+  ClientHeight = 531
+  ClientWidth = 715
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnClose = FormClose
+  DesignerMasterStyle = 0
+  object Grid1: TGrid
+    Align = MostTop
+    CanFocus = True
+    CanParentFocus = True
+    ClipChildren = True
+    ClipParent = True
+    Size.Width = 715.000000000000000000
+    Size.Height = 409.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    RowCount = 0
+    Options = [ColumnResize, ColumnMove, ColLines, RowLines, Tabs, Header, HeaderClick, AutoDisplacement]
+    OnGetValue = Grid1GetValue
+    OnSetValue = Grid1SetValue
+    Viewport.Width = 711.000000000000000000
+    Viewport.Height = 384.000000000000000000
+    object StringColumn1: TStringColumn
+      Header = 'Name'
+      Size.Width = 521.000000000000000000
+    end
+    object StringColumn2: TStringColumn
+      Header = 'Hash'
+      Size.Width = 199.000000000000000000
+    end
+  end
+  object Button1: TButton
+    Position.X = 584.000000000000000000
+    Position.Y = 437.000000000000000000
+    Size.Width = 121.000000000000000000
+    Size.Height = 28.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'Select'
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Enabled = False
+    Position.X = 584.000000000000000000
+    Position.Y = 474.000000000000000000
+    Size.Width = 121.000000000000000000
+    Size.Height = 28.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Text = 'Save'
+    OnClick = Button2Click
+  end
+  object Label3: TLabel
+    Locked = True
+    Position.X = 8.000000000000000000
+    Position.Y = 412.000000000000000000
+    Size.Width = 441.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Current File Progress :'
+    TabOrder = 5
+  end
+  object ProgressBar1: TProgressBar
+    Orientation = Horizontal
+    Position.X = 8.000000000000000000
+    Position.Y = 432.000000000000000000
+    Size.Width = 441.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Label4: TLabel
+    Locked = True
+    Position.X = 8.000000000000000000
+    Position.Y = 460.000000000000000000
+    Size.Width = 441.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Overall Progress :'
+    TabOrder = 7
+  end
+  object ProgressBar2: TProgressBar
+    Orientation = Horizontal
+    Position.X = 8.000000000000000000
+    Position.Y = 480.000000000000000000
+    Size.Width = 554.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Label7: TLabel
+    Position.X = 456.000000000000000000
+    Position.Y = 413.000000000000000000
+    Text = 'Hash :'
+    TabOrder = 9
+  end
+  object ComboBox2: TComboBox
+    Items.Strings = (
+      'CRC32'
+      'MD5'
+      'SHA1'
+      'XXHash32')
+    ItemIndex = 0
+    Position.X = 456.000000000000000000
+    Position.Y = 432.000000000000000000
+    Size.Width = 106.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 10
+  end
+  object SaveDialog1: TSaveDialog
+    Left = 384
+    Top = 464
+  end
+  object Layout1: TLayout
+    Position.X = 8.000000000000000000
+    Position.Y = 504.000000000000000000
+    Size.Width = 554.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 14
+    object Label1: TLabel
+      Align = MostLeft
+      Locked = True
+      Size.Width = 227.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'File Processed : 0 \ 0'
+      TabOrder = 3
+    end
+    object Label2: TLabel
+      Align = MostRight
+      Position.X = 327.000000000000000000
+      Size.Width = 227.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Trailing
+      Text = 'Elapsed time : 0:00:00.000'
+      TabOrder = 4
+    end
+  end
+end
